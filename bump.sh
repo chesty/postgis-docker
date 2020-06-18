@@ -17,7 +17,7 @@ bump () {
 	git checkout $BRANCH
 	git pull
 
-	DATE=`date +%y.%m.%d.1`
+	DATE=`date +%Y%m%d.1`
 
 	sed -i "s/ENV BUMP .*/ENV BUMP $DATE/" Dockerfile 
 	git stage Dockerfile
