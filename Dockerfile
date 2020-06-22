@@ -1,6 +1,6 @@
 FROM ubuntu:eoan
 
-ENV BUMP 20.06.19.1
+ENV BUMP 20200623.1
 
 RUN set -ex; \
 	if ! command -v gpg > /dev/null; then \
