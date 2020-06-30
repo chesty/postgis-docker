@@ -1,6 +1,6 @@
-FROM ubuntu:eoan
+FROM ubuntu:focal
 
-ENV BUMP 20200623.1
+ENV BUMP 20200630
 
 RUN set -ex; \
 	if ! command -v gpg > /dev/null; then \
@@ -90,7 +90,7 @@ RUN set -ex; \
 # see note below about "*.pyc" files
 	export PYTHONDONTWRITEBYTECODE=1; \
 	\
-    echo "deb http://apt.postgresql.org/pub/repos/apt/ eoan-pgdg main $PG_MAJOR" > /etc/apt/sources.list.d/pgdg.list; \
+    echo "deb http://apt.postgresql.org/pub/repos/apt/ focal-pgdg main $PG_MAJOR" > /etc/apt/sources.list.d/pgdg.list; \
     apt-get update; \
 	DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends postgresql-common; \
 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; \
