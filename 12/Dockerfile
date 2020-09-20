@@ -1,6 +1,6 @@
 FROM ubuntu:focal
 
-ENV BUMP 20200913.1
+ENV BUMP 20200920.1
 
 RUN set -ex; \
 	if ! command -v gpg > /dev/null; then \
