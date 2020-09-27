@@ -1,6 +1,6 @@
 FROM ubuntu:focal
 
-ENV BUMP 20200630.1
+ENV BUMP 20200922
 
 RUN set -ex; \
 	if ! command -v gpg > /dev/null; then \
@@ -83,7 +83,7 @@ RUN set -ex; \
 	rm -rf "$GNUPGHOME"; \
 	apt-key list
 
-ENV PG_MAJOR 12
+ENV PG_MAJOR 13
 
 RUN set -ex; \
 	\
